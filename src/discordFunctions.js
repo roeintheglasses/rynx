@@ -124,6 +124,11 @@ async function download(message, serverQueue, discord, link) {
         .saveToFile(saveLocation);
 }
 
+function donate(message) {
+    return message.channel.send(`Love my work? Buy me a coffee here : ${"https://www.buymeacoffee.com/roeintheglasses"}`)
+}
+
+
 module.exports = {
     queue,
     start,
@@ -131,5 +136,6 @@ module.exports = {
     play,
     skip,
     stop,
-    download
+    download,
+    donate
 };

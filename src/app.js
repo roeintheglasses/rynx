@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const youTube = require('simple-youtube-api');
 
-
 //User imports 
 const discordFunctions = require('./discordFunctions')
 
@@ -14,7 +13,6 @@ const indexRoute = require('../routes/index');
 const port = process.env.PORT || 3000;
 const token = process.env.TOKEN;
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
-
 
 const PREFIX = '?';
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -31,12 +29,10 @@ const client = new discord.Client();
 const app = express();
 app.set("view engine", "ejs");
 
-
 //Express Routes
 app.use('/', indexRoute);
 app.use(express.static(publicDirectoryPath));
 app.use("/bulma", express.static(bulmaPath));
-
 
 //Discord JS Code
 client.once('ready', () => {
@@ -76,8 +72,9 @@ client.on('message', message => {
                 discordFunctions.download(message, serverQueue, discord, link);
             })
             break;
-        case 'hello':
-            message.channel.send("YOOO WADDUPP GAMEERSZZ!!")
+
+        case 'support':
+            discordFunctions.donate(message);
             break;
 
     }
