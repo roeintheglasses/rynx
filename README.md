@@ -3,6 +3,6 @@
 
 ## The Master of all Discord bot
 ### Invite Rynx to your server
-'''
+```
 https://discord.com/api/oauth2/authorize?client_id=713240242672631898&permissions=574094912&scope=bot
-'''
+```
