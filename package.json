@@ -6,7 +6,6 @@
     "scripts": {
         "start": "node src/app.js",
         "dev": "env-cmd -f ./config/dev.env node src/app.js "
-
     },
     "repository": {
         "type": "git",
@@ -24,10 +23,15 @@
     },
     "homepage": "https://github.com/roeintheglasses/rynx#readme",
     "dependencies": {
+        "bulma": "^0.8.2",
         "discord.js": "^12.2.0",
         "ejs": "^3.1.3",
         "express": "^4.17.1",
+        "fluent-ffmpeg": "^2.1.2",
         "opusscript": "0.0.7",
+        "simple-youtube-api": "^5.2.1",
+        "youtube-search": "^1.1.4",
+        "yt-search": "^1.1.2",
         "ytdl-core": "^2.1.4"
     },
     "devDependencies": {
