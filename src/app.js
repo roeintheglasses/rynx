@@ -41,6 +41,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
     if (message.author.bot) return;
+    if (message.content.charAt[0] != prefix) return;
     const serverQueue = discordFunctions.queue.get(message.guild.id);
     const args = message.content.substring(PREFIX.length).split(" ");
 
